@@ -26,15 +26,6 @@ subsystem.
 ---
 
 # Module Interface
-
-The interface is divided into three groups:
-
-1. Clock and reset
-2. Control signals
-3. Data signals
-
----
-
 ## Clock and Reset
 
 | Port | Direction | Width | Description |
