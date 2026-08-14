@@ -39,5 +39,5 @@ microarchitecture.
 TERME uses the following three-stage pipeline:
 
 <p align="center">
-  <img src="assets/TERME-arch.png" width="420">
+  <img src="assets/TERME-arch.png" width="720">
 </p>
