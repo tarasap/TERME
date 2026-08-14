@@ -48,7 +48,7 @@ The core has been rigorously benchmarked in gate-level simulation and synthesize
 | **CoreMark Score** | 659.87 |
 | **CoreMark / MHz** | 1.51 |
 | **Simulation Environment**| Gate-level, ideal memory (bare-metal environment) |
-| **Compiler Flags** | `-march=rv32ib_zicond_zmmul_zicsr_zca -mabi=ilp32 -Ofast` |
+| **Compiler Flags** | `-march=rv32ic_zicond_zmmul_zicsr_zca -mabi=ilp32 -Ofast` |
 
 ## Repository Structure
 
