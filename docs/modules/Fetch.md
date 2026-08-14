@@ -89,7 +89,3 @@ The Fetch module consists of four main components:
 
 ---
 
-# Program Counter Control
-
-The next program counter value is selected according to the following
-priority:
