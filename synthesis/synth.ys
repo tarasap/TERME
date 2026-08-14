@@ -1,0 +1,30 @@
+read_verilog src\TERME.v 		src\ALU.v 			src\ALU_Lane.v 			src\ALU_Decoder.v 
+read_verilog src\Branch_Unit.v 		src\Memory_WriteBack.v
+read_verilog src\TERME_Controller.v 	src\CSRs.v 			src\CSR_Controller.v 		
+read_verilog src\Decode_Execute.v 	src\Decompressor.v		src\Decoder2.v 			src\Decoder1.v 
+read_verilog src\Hazard_Unit.v 		src\Instruction_Load_Unit.v 	src\Sign_Extension.v 
+read_verilog src\TERME_Engine.v		src\Load_Store_Unit.v 		src\Zmmul_Decoder.v		src\Mul_Unit.v
+read_verilog src\Regfile.v 		src\Fetch.v 
+read_verilog src\Mux_2.v 		src\Mux_3.v 			src\Mux_4.v
+read_verilog src\Reg.v			src\Pipe_Register.v
+
+synth -top TERME; flatten
+dfflibmap -liberty cell\stdcell.lib
+
+abc -liberty cell\stdcell.lib -script +read_constr,constraints.sdc;strash;ifraig;retime,-D,3000;strash;dch,-f;map;buffer,-N,10;upsize;dnsize
+
+# Example Yosys ABC pass with a fan-out limit   (-D 5000 sets ABC's)
+#abc -liberty cell\stdcell.lib -constr constraints.sdc -D 3000 -I 10
+clean
+
+splitnets; 
+opt_clean -purge
+
+
+check
+write_blif debug.blif
+write_verilog -noexpr terme_core.v
+
+# --- REPORTS ---
+tee -o report_area.txt stat -liberty cell\stdcell.lib
+tee -o report_timing.txt ltp
