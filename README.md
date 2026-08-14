@@ -41,3 +41,16 @@ TERME uses the following three-stage pipeline:
 <p align="center">
   <img src="assets/TERME-arch.png" width="720">
 </p>
+
+##  CoreMark Performance
+
+| Metric | Value |
+| :--- | :--- |
+| CoreMark | 659.87 |
+| Frequency | 437 MHz |
+| CoreMark/MHz | 1.51 |
+| Simulation | Gate-level, ideal memory |
+| Flags      | -march=rv32ib_zicond_zmmul_zicsr_zca -mabi=ilp32 -Ofast |
+
+*Measured in gate-level simulation without cache/memory latency. Provides architectural comparison point.*
+
