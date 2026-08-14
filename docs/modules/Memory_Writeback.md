@@ -84,6 +84,4 @@ The `Memory_WriteBack` module contains three main components:
 | `M4_mwb` | `Mux_4` | Selects the write-back data source |
 | `M2_CSR_WData_mwb` | `Mux_2` | Selects CSR write data source |
 
-The detailed behavior of these submodules is documented separately.
-
 
