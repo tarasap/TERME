@@ -7,7 +7,6 @@ three-stage pipeline.
 
 TERME uses the following pipeline organization:
 
-```text
         Fetch              Decode/Execute          Memory/Write-Back
 
           F  ---------------- DEX ---------------- MWB
