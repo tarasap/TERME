@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/terme-logo.png" width="420">
+  <img src="assets/terme-logo.png" width="320">
 </p>
 
 <h1 align="center">TERME</h1>
