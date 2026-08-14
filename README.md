@@ -38,21 +38,6 @@ microarchitecture.
 
 TERME uses the following three-stage pipeline:
 
-```text
-        ┌─────────┐
-        │  Fetch  │
-        │    F    │
-        └────┬────┘
-             │
-             ▼
-    ┌─────────────────┐
-    │ Decode / Execute│
-    │       DEX       │
-    └────────┬────────┘
-             │
-             ▼
-    ┌─────────────────┐
-    │ Memory / Write  │
-    │      Back       │
-    │       MWB       │
-    └─────────────────┘
+<p align="center">
+  <img src="assets/TERME-arch.png" width="420">
+</p>
