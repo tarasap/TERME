@@ -8,49 +8,56 @@
   <b>Three-stage Embedded RISC-V Microprocessor Engine</b>
 </p>
 
-<p align="center">
-  A compact 32-bit in-order RISC-V processor implemented in SystemVerilog
-  for embedded and ASIC-oriented applications.
-</p>
-
 ---
 
 ## Overview
 
-TERME is a custom 32-bit RISC-V processor designed around a compact
-three-stage in-order pipeline.
+TERME is a custom 32-bit RISC-V processor designed around a highly efficient, in-order three-stage pipeline. 
 
-The processor currently implements:
+The processor is primarily intended as a lightweight embedded core with an emphasis on low area, low power, synthesizability, and clean microarchitecture. It features:
 
-- RV32I base integer ISA
-- RISC-V compressed instructions (C)
-- Zicsr CSR instructions
-- Zmmul multiplication instructions
-- Machine-mode CSR and interrupt handling
-- Load/store support
+- **RV32I** base integer ISA
+- **C** (Compressed) extension for improved code density
+- **Zicsr** extension for Control and Status Registers
+- **Zmmul** extension for hardware multiplication
+- Machine-mode CSR and interrupt handling (Timer, External, Software)
 - Separate instruction and data memory interfaces
-
-The processor is primarily intended as a small embedded RISC-V core with
-an emphasis on low area, low power, synthesizability, and clean
-microarchitecture.
 
 ## Architecture
 
-TERME uses the following three-stage pipeline:
+TERME utilizes a Fetch, Decode-Execute and Memory-Writeback three-stage pipeline. 
 
 <p align="center">
   <img src="assets/TERME-arch.png" width="720">
 </p>
 
-##  CoreMark Performance
+## Performance & Physical Metrics
 
+The core has been rigorously benchmarked in gate-level simulation and synthesized targeting the **Nangate 45nm Open Cell Library**.
+
+### Synthesis & Power (Nangate 45nm)
+| Metric | Value | Notes |
+| :--- | :--- | :--- |
+| **Max Frequency ($F_{max}$)** | ~410 MHz | Timing met with 2.45ns target clock |
+| **Total Core Area** | ~22,846 µm² | Standalone core (excluding external memory macros) |
+
+
+### CoreMark Benchmark
 | Metric | Value |
 | :--- | :--- |
-| CoreMark | 659.87 |
-| Frequency | 437 MHz |
-| CoreMark/MHz | 1.51 |
-| Simulation | Gate-level, ideal memory |
-| Flags      | -march=rv32ib_zicond_zmmul_zicsr_zca -mabi=ilp32 -Ofast |
+| **CoreMark Score** | 659.87 |
+| **CoreMark / MHz** | 1.51 |
+| **Simulation Environment**| Gate-level, ideal memory (bare-metal environment) |
+| **Compiler Flags** | `-march=rv32ib_zicond_zmmul_zicsr_zca -mabi=ilp32 -Ofast` |
 
-*Measured in gate-level simulation without cache/memory latency. Provides architectural comparison point.*
+## Repository Structure
 
+The repository is organized to separate physical design, software, and simulation environments:
+
+* `rtl/` - Core standard Verilog source files.
+* `sim/` - Bare-metal simulation environment (`tb_coremark.v`, memory models).
+* `sw/` - Boot code (`ctr0.s`), linker scripts (`link.ld`), and C benchmarking software.
+* `synthesis/` - Yosys scripts, OpenSTA configurations, and timing constraints (`.sdc`).
+* `docs/` - Deep-dive architectural documentation and module-by-module explanations.
+
+*(Navigate to the individual directories above for specific instructions on how to run simulations, compile software, or reproduce synthesis metrics).*
