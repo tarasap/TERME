@@ -13,7 +13,6 @@ dfflibmap -liberty cell\stdcell.lib
 
 abc -liberty cell\stdcell.lib -script +read_constr,constraints.sdc;strash;ifraig;retime,-D,3000;strash;dch,-f;map;buffer,-N,10;upsize;dnsize
 
-# Example Yosys ABC pass with a fan-out limit   (-D 5000 sets ABC's)
 #abc -liberty cell\stdcell.lib -constr constraints.sdc -D 3000 -I 10
 clean
 
