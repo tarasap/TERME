@@ -14,9 +14,9 @@ module TERME #(parameter size = 32)(
     input  clk,
     input  rst,
 
-    input                   Irq_Timer_i,        // From Top
-    input                   Irq_Ext_i,          // From Top
-    input                   Irq_software_i,     // From Top
+    input                   Irq_Timer_i,         
+    input                   Irq_Ext_i,           
+    input                   Irq_software_i,     
     input                   DMem_Interface_Req_Ready_i,
     input                   Imem_Interface_Valid_i,
     output                  Imem_Interface_Stall_o,
