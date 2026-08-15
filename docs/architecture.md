@@ -3,6 +3,9 @@
 ## 1. Overview
 
 TERME is a 32-bit in-order RISC-V processor implementing a three-stage pipeline. It supports the base RV32IC instruction set, alongside the Zicsr (Control and Status Register) and Zmmul (Multiply-Only) extensions.
+<p align="center">
+  <img src="assets/TERME-arch.png" width="320">
+</p>
 
 ## 2. Core Modules
 ### TERME_Engine (Datapath)
