@@ -1,4 +1,4 @@
-# TERME Controller Module Documentation
+# TERME Controller
 
 ## Overview
 The `TERME_Controller` is the primary control unit for the TERME processor core. It acts as the brain behind the datapath, responsible for decoding instructions and orchestrating the operation of the entire pipeline. The module integrates multiple specialized decoders—including the primary instruction decoders (`Decoder1`, `Decoder2`), the `ALU_Decoder`, and the `Zmmul_Decoder` for multiplication extensions. It also encompasses a `Hazard_Unit` to manage data and control hazards (stalls and flushes) and a `CSR_Controller` to oversee Control and Status Register operations, interrupt handling, and privilege modes.
@@ -9,8 +9,6 @@ The `TERME_Controller` is the primary control unit for the TERME processor core.
 | `size` | `32` | The standard bit width for the processor datapath operations. |
 
 ## Ports
-
-### Inputs
 | Port Name | Width | Description |
 | :--- | :--- | :--- |
 | `clk` | 1 | System clock signal |
