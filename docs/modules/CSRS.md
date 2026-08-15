@@ -1,4 +1,4 @@
-# Control and Status Registers (CSRs) Module
+# Control and Status Registers (CSRs) 
 
 ## Overview
 
