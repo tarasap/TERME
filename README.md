@@ -59,4 +59,3 @@ The repository is organized to separate physical design, software, and simulatio
 * `synthesis/` - Yosys scripts, OpenSTA configurations, and timing constraints (`.sdc`).
 * `docs/` - Deep-dive architectural documentation and module-by-module explanations.
 
-*(Navigate to the individual directories above for specific instructions on how to run simulations, compile software, or reproduce synthesis metrics).*
