@@ -55,8 +55,7 @@ The core has been rigorously benchmarked in gate-level simulation and synthesize
 The repository is organized to separate physical design, software, and simulation environments:
 
 * `rtl/` - Core standard Verilog source files.
-* `sim/` - Bare-metal simulation environment (`tb_coremark.v`, memory models).
-* `sw/` - Boot code (`ctr0.s`), linker scripts (`link.ld`), and C benchmarking software.
+* `sim/` - Bare-metal simulation environment (`tb_coremark.v`, memory models), Boot code (`ctr0.s`), linker scripts (`link.ld`)
 * `synthesis/` - Yosys scripts, OpenSTA configurations, and timing constraints (`.sdc`).
 * `docs/` - Deep-dive architectural documentation and module-by-module explanations.
 
