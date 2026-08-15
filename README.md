@@ -12,7 +12,7 @@
 
 ## Overview
 
-TERME is a custom 32-bit RISC-V processor designed around a highly efficient, in-order three-stage pipeline. 
+TERME is a custom 32-bit RISC-V processor designed around an efficient, in-order three-stage pipeline. 
 
 The processor is primarily intended as a lightweight embedded core with an emphasis on low area, low power, synthesizability, and clean microarchitecture. It features:
 
