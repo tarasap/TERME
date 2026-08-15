@@ -1,4 +1,4 @@
-# CSR_Controller Module Documentation
+# CSR_Controller 
 
 ## Overview
 The `CSR_Controller` module manages the control logic for the processor's Control and Status Registers (CSRs) alongside its interrupt handling mechanism. It evaluates pending interrupt requests (external, timer, and software) against their respective enable bits and the processor's global privilege state to determine if an interrupt should be taken. Additionally, it decodes the `Funct3` field of incoming CSR instructions to dictate the specific CSR operation (such as read/write, set, or clear) and identifies whether the operation utilizes an immediate value.
@@ -9,7 +9,6 @@ The `CSR_Controller` module manages the control logic for the processor's Contro
 | `size` | `32` | The standard bit width for the processor datapath parameters. |
 
 ## Ports
-
 | Port Name | Width | Description |
 | :--- | :--- | :--- |
 | `clk` | 1 | System clock signal |
