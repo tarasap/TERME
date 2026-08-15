@@ -1,11 +1,9 @@
-# Decoder2 Module Documentation
+# Decoder2  
 
 ## Overview
 The `Decoder2` module serves as the primary instruction decoding unit within the TERME processor's control architecture. By evaluating the instruction's 7-bit `OPCode`, along with the `Funct3` and `Funct12` fields, it generates the core control signals necessary to steer the datapath. This includes determining ALU operations, resolving operand sources, managing memory read/write permissions and data types, identifying immediate formats, and controlling jump or machine return behaviors.
 
 ## Ports
-
-### Inputs
 | Port Name | Width | Description |
 | :--- | :--- | :--- |
 | `OPCode_i` | 7 | Instruction opcode |
