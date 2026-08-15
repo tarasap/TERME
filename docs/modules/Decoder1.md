@@ -1,4 +1,4 @@
-# Decoder1 Module Documentation
+# Decoder1 
 
 ## Overview
 The `Decoder1` module is a preliminary instruction decoding unit within the TERME processor's control structure. It evaluates the 7-bit instruction opcode to generate foundational control signals required for the early stages of the pipeline. Specifically, it asserts whether an instruction requires immediate value extraction, register file reading, or branch evaluation, providing essential structural cues to the downstream datapath.
