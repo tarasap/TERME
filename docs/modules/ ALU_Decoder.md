@@ -1,4 +1,4 @@
-# ALU_Decoder Module 
+# ALU_Decoder  
 
 ## Overview
 The `ALU_Decoder` module is responsible for generating the specific control signals required by the Arithmetic Logic Unit (ALU). By combining the broad operational category provided by the main decoder (`ALUOp_i`) with specific instruction fields (`Funct3_i`, `Funct7_i`, and `OPB5_i`), it outputs a precise 5-bit control signal (`ALUControl_ad_o`) that dictates the exact arithmetic or logical operation to be executed by the datapath.
