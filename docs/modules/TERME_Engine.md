@@ -1,4 +1,4 @@
-# TERME Engine Module 
+# TERME Engine  
 
 ## Overview
 The `TERME_Engine` is the central processing core of the TERME project, implementing a 3-stage pipelined 32-bit RISC-V architecture capable of supporting RV32I, Zicsr, Zmmul, and compressed instructions. This top-level module acts as the primary structural backbone of the processor. It integrates the core pipeline stages—Instruction Fetch, Decode/Execute, and Memory/Writeback—via dedicated pipeline registers. Additionally, it instantiates the Control and Status Registers (CSRs) to handle hardware interrupts, and privilege modes, while coordinating communications with the instruction and data memory interfaces.
