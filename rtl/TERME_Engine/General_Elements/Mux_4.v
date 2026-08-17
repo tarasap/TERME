@@ -23,13 +23,13 @@ module Mux_4 #(parameter size = 32) (
     always @(in_1,in_2,in_3,in_4,select) begin
 
         if (select == 2'b00)
-            mux_out <=  in_1;
+            mux_out  =  in_1;
         else if (select == 2'b01)
-            mux_out <= in_2;
+            mux_out  = in_2;
         else if (select == 2'b10)
-            mux_out <= in_3;
+            mux_out  = in_3;
         else   
-            mux_out <=  in_4;
+            mux_out  =  in_4;
 
 end 
 endmodule
