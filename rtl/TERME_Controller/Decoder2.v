@@ -36,7 +36,7 @@ module Decoder2 (
                                  (OPCode_i == 7'b1101111) ? 3'b011 : 
                                                             3'b100;
 
-    always @(OPCode_i, Funct3_i) begin
+    always @(*) begin
         {ALUOp_d2_o, W_Type_d2_o, Regwrite_d2_o, ALUSrc_d2_o, ResultSrc_d2_o, Jump_d2_o, R_Type_d2_o, Mem_Read_d2_o, Mem_Write_d2_o, Mret_d2_o} = 0;
         
         case (OPCode_i)
