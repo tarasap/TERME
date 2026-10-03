@@ -38,8 +38,8 @@ The core has been rigorously benchmarked in gate-level simulation and synthesize
 ### Synthesis & Power (Nangate 45nm)
 | Metric | Value | Notes |
 | :--- | :--- | :--- |
-| **Max Frequency ($F_{max}$)** | ~410 MHz | Timing met with 2.45ns target clock |
-| **Total Core Area** | ~22,846 µm² | Standalone core (excluding external memory macros) |
+| **Max Frequency ($F_{max}$)** | ~576 MHz | Timing met with 2.45ns target clock |
+| **Total Core Area** | ~17,100 µm² | Standalone core (excluding external memory macros) |
 
 
 ### CoreMark Benchmark
@@ -48,7 +48,7 @@ The core has been rigorously benchmarked in gate-level simulation and synthesize
 | **CoreMark Score** | 659.87 |
 | **CoreMark / MHz** | 1.51 |
 | **Simulation Environment**| Gate-level, ideal memory (bare-metal environment) |
-| **Compiler Flags** | `-march=rv32ic_zicond_zmmul_zicsr_zca -mabi=ilp32 -Ofast` |
+| **Compiler Flags** | `-march=rv32ic_zmmul_zicsr_zca -mabi=ilp32 -Ofast` |
 
 ## Repository Structure
 
