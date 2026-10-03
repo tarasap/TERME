@@ -28,7 +28,7 @@ The processor is primarily intended as a lightweight embedded core with an empha
 TERME utilizes a Fetch, Decode-Execute and Memory-Writeback three-stage pipeline. 
 
 <p align="center">
-  <img src="assets/TERME-arch.png" width="720">
+  <img src="assets/TERME-arch.svg" width="720">
 </p>
 
 ## Performance & Physical Metrics
