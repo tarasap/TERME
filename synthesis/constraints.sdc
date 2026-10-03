@@ -1,7 +1,7 @@
 set sdc_version 2.0
 
 # Clock
-create_clock -name clk -period 2.45 [get_ports clk]
+create_clock -name clk -period 2 [get_ports clk]
 set_clock_uncertainty 0.05 -setup [get_clocks clk]
 set_clock_uncertainty 0.05 -hold [get_clocks clk]
 set_clock_transition 0.1 [get_clocks clk]
