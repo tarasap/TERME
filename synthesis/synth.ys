@@ -8,22 +8,17 @@ read_verilog src\Regfile.v 		src\Fetch.v
 read_verilog src\Mux_2.v 		src\Mux_3.v 			src\Mux_4.v
 read_verilog src\Reg.v			src\Pipe_Register.v
 
-synth -top TERME; flatten
-dfflibmap -liberty cell\stdcell.lib
+synth -top TERME
 
-abc -liberty cell\stdcell.lib -script +read_constr,constraints.sdc;strash;ifraig;retime,-D,3000;strash;dch,-f;map;buffer,-N,10;upsize;dnsize
+flatten -noscopeinfo
 
-#abc -liberty cell\stdcell.lib -constr constraints.sdc -D 3000 -I 10
+read_liberty -lib stdcells.lib
+dfflibmap -liberty stdcells.lib
+
+abc -liberty stdcells.lib -constr abc.constr -script +strash;ifraig;retime;strash;dch;map;buffer;upsize;dnsize;stime;
+opt -full
 clean
 
-splitnets; 
-opt_clean -purge
-
-
-check
-write_blif debug.blif
-write_verilog -noexpr terme_core.v
-
-# --- REPORTS ---
-tee -o report_area.txt stat -liberty cell\stdcell.lib
-tee -o report_timing.txt ltp
+setundef -undriven -zero
+write_verilog -noattr TERME.v
+stat -liberty stdcells.lib
