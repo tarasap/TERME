@@ -35,18 +35,20 @@ TERME utilizes a Fetch, Decode-Execute and Memory-Writeback three-stage pipeline
 
 The core has been rigorously benchmarked in gate-level simulation and synthesized targeting the **Nangate 45nm Open Cell Library**.
 
-### Synthesis & Power (Nangate 45nm)
+### Synthesis (Nangate 45nm)
 | Metric | Value | Notes |
 | :--- | :--- | :--- |
-| **Max Frequency ($F_{max}$)** | ~576 MHz | Timing met with 2.45ns target clock |
+| **Max Frequency ($F_{max}$)** | ~576 MHz | Timing met with 1.736 ns target clock |
 | **Total Core Area** | ~17,100 µm² | Standalone core (excluding external memory macros) |
+
 
 
 ### CoreMark Benchmark
 | Metric | Value |
 | :--- | :--- |
-| **CoreMark Score** | 659.87 |
+| **CoreMark Score** | 869.76 |
 | **CoreMark / MHz** | 1.51 |
+| **Total Core Power** | 4.08 mW (Clock-gated)|
 | **Simulation Environment**| Gate-level, ideal memory (bare-metal environment) |
 | **Compiler Flags** | `-march=rv32ic_zmmul_zicsr_zca -mabi=ilp32 -Ofast` |
 
