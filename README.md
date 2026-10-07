@@ -50,7 +50,7 @@ The core has been rigorously benchmarked in gate-level simulation and synthesize
 | **CoreMark / MHz** | 1.51 |
 | **Total Core Power** | 4.08 mW (Clock-gated)|
 | **Simulation Environment**| Gate-level, ideal memory (bare-metal environment) |
-| **Compiler Flags** | `-march=rv32ic_zmmul_zicsr_zca -mabi=ilp32 -Ofast` |
+| **Compiler Flags** | `-march=rv32ic_zmmul_zicsr_zca -mabi=ilp32 -O3` |
 
 ## Repository Structure
 
